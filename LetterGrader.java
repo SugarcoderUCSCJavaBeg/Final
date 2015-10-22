@@ -10,27 +10,23 @@ public class LetterGrader {
 
     // Gets the exact path: System.out.println(new File("input.txt").getAbsolutePath());
 
-    
+
     public static int readScore() {
         try {
             Scanner diskScanner = new Scanner(new File("input.txt"));
             while (diskScanner.hasNextLine()) {
                 System.out.println(diskScanner.nextLine());
-                for (int i = 0; i < 1000; i++) {
-                    return i;
-                }
             }
             diskScanner.close();
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        return readScore();
+        return 0;
     }
 
 
-
-
+    
 }
 
 
