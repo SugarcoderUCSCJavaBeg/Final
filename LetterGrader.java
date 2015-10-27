@@ -1,5 +1,6 @@
 import java.io.*;
-
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -14,72 +15,108 @@ public class LetterGrader {
 
 
 
-        public int readScore () {
-            try {
-                Scanner diskScanner = new Scanner(new File("input.txt"));
-                while (diskScanner.hasNextLine()) {
-                    System.out.println(diskScanner.nextLine());
-                }
-                diskScanner.close();
-                System.out.println("****************************\n");
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
+    public int readScore () {
+        try {
+            Scanner diskScanner = new Scanner(new File("input.txt"));
+            while (diskScanner.hasNextLine()) {
+                System.out.println(diskScanner.nextLine());
             }
-            return 0;
+            diskScanner.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
-
-
-
-
-    public long calcLetterGrade() throws NumberFormatException, IOException {
-
-        Scanner calcScanner = new Scanner(new File("input.txt"));
-        ArrayList<Double> averages = new ArrayList<>();
-
-        double max = 0, min = 100;
-
-        while(calcScanner.hasNextLine()) {
-
-            String line = calcScanner.nextLine();
-            String[] score = line.split(",");
-
-
-            double[] points = new double[score.length - 1];
-
-            for (int i = 1; i < score.length; i++) {
-                points[i - 1] = Double.parseDouble(score[i]);
-            }
-
-            double sumNum = 0.0;
-
-            for (double i : points) {
-                sumNum += i;
-                min = Math.min(min, i);
-                max = Math.max(max, i);
-            }
-
-            double avg = sumNum / 10;
-
-
-            System.out.println(avg);
-        }
-
-        calcScanner.close();
-        double avgSum = .0;
-
-        for (double avg : averages) {
-            avgSum += avg;
-        }
-        System.out.println("Maximum: " + max + "");
-        System.out.println("Minimum: " + min + "");
-        System.out.println("Average: " + avgSum / averages.size() + " ");
-
-
-
-
         return 0;
     }
+
+
+
+    public static void displayAllAverages() throws FileNotFoundException {
+
+        // Format the scores
+        DecimalFormat df = new DecimalFormat("###.#");
+        df.setRoundingMode(RoundingMode.HALF_UP);
+
+        ArrayList<Double> studentAverages = new ArrayList<Double>();
+
+
+            Scanner scanner = new Scanner(new File("input.txt"));
+
+            while(scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                String [] values = line.split(", ");
+
+
+                // Converts String Array into Double Array
+                double [] scoresPerPerson = new double[values.length];
+
+                for (int i = 1; i < values.length; i++) {
+                    scoresPerPerson[i] = Double.parseDouble(values[i]);
+                }
+
+                // Find the sum, and then find the average; add it to an arrayList
+                double sum = 0.0;
+
+                for (double i : scoresPerPerson) {
+                    sum += i;
+                }
+
+
+                double average = sum / values.length;
+
+                studentAverages.add(average);
+
+            }
+        scanner.close();
+
+
+
+
+        // Compute the average and get the maximum scores and minimum scores.
+
+        double max = 0;
+        double min = 100;
+        double computeAverage = 0;
+
+        for (double average : studentAverages) {
+            if (average > max) {
+                max = average;
+            }
+            if (average < min) {
+                min = average;
+            }
+            computeAverage += average;
+        }
+
+        computeAverage /= studentAverages.size();
+
+        System.out.println();
+        System.out.println("High : " + df.format(max));
+        System.out.println("Low : " + df.format(min));
+        System.out.println("Average : " + df.format(computeAverage));
+
+
+        System.out.println("****************");
+
+
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
