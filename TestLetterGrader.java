@@ -13,7 +13,7 @@ public class TestLetterGrader {
         // System.out.println("Q1    Q2    Q3    Q4    M1    M2    F");
         // System.out.println("..... Press enter to continue");
 
-        System.out.println("This is all the averages of the students.");
+        // System.out.println("This is all the averages of the students.");
 
         letterGrader.displayAllAverages();
 
