@@ -13,7 +13,7 @@ public class calcLetterGrade {
      */
 
 
-    public static String calcLetterGrade(double average) {
+    public static String calcGrades(double average) {
 
         if (average >= 90) {
             return "A";
