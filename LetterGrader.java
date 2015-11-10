@@ -447,8 +447,8 @@ public class LetterGrader {
         return avg;
     }
 
-
 }
+
 
 
 
