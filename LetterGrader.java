@@ -24,20 +24,26 @@ public class LetterGrader {
 
 
         /*
-        BufferedReader method works too.
+        BufferedReader works too!
 
         public static void main(String[] args) throws IOException {
+
+            ArrayList<String> list = new ArrayList<>();
+
             BufferedReader bf = new BufferedReader(new FileReader("input.txt"));
 
             while((true)) {
                 String line = bf.readLine();
-                if(line == null) {
+                if (line == null) {
                     break;
                 }
+                list.add(line);
+
                 System.out.println(line);
             }
+            bf.close();
         }
-     */
+        */
 
 
     }
