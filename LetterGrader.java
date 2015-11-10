@@ -21,7 +21,28 @@ public class LetterGrader {
             e.printStackTrace();
         }
         return 0;
+
+
+        /*
+        BufferedReader method works too.
+
+        public static void main(String[] args) throws IOException {
+            BufferedReader bf = new BufferedReader(new FileReader("input.txt"));
+
+            while((true)) {
+                String line = bf.readLine();
+                if(line == null) {
+                    break;
+                }
+                System.out.println(line);
+            }
+        }
+     */
+
+
     }
+
+
 
 
     // Calculating the average, maximum, and minimum scores.
