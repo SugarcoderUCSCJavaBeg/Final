@@ -1,52 +1,70 @@
-import java.io.*;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
 
-    /* Total Score (100%): quiz1*.10 + quiz2*.10 + quiz3*.10 + quiz4*.10 +
-                    mid1*.20 + mid2*.15 + final*.25
-        Determination of grade: >=90% = A, 80-89% = B, 70-79% = C, 60-69% = D, <=59% = F
-    */
+/**
+ * Created by Sugarcoder on 11/18/2015.
+ */
 
-public class LetterGrader {
 
-    // Gets the exact path: System.out.println(new File("input.txt").getAbsolutePath());
+public class ScoreGrader {
 
-    public int readScore() {
-        try {
-            Scanner diskScanner = new Scanner(new File("input.txt"));
-            while (diskScanner.hasNextLine()) {
-                System.out.println(diskScanner.nextLine());
+
+    public static void main(String[] args) throws IOException {
+
+        ArrayList<Integer> list = new ArrayList<>();
+        BufferedReader bf = null;
+        bf = new BufferedReader(new FileReader("input.txt"));
+
+        while ((true)) {
+            String line = null;
+            try {
+                line = bf.readLine();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            diskScanner.close();
-        } catch (FileNotFoundException e) {
+            if (line == null) {
+                break;
+            }
+            try {
+                list.add(Integer.parseInt((line)));
+            } catch (Exception e) {
+            }
+
+            String[] columns = line.split(",\\s*");
+
+            int q1 = Integer.parseInt(columns[1]);
+            int q2 = Integer.parseInt(columns[2]);
+            int q3 = Integer.parseInt(columns[3]);
+            int q4 = Integer.parseInt(columns[4]);
+            int mid1 = Integer.parseInt(columns[5]);
+            int mid2 = Integer.parseInt(columns[6]);
+            int final1 = Integer.parseInt(columns[7]);
+
+            // System.out.println(q1);      // This will display the column of q1
+
+            ArrayList<Integer> scoreList = new ArrayList<>();
+            scoreList.add(q1);
+            scoreList.add(q2);
+            scoreList.add(q3);
+            scoreList.add(q4);
+            scoreList.add(mid1);
+            scoreList.add(mid2);
+            scoreList.add(final1);
+
+            // System.out.println(scoreList.get(0));     // This will display the numbers by column
+
+        }
+
+        try {
+            bf.close();
+        } catch (IOException e) {
             e.printStackTrace();
         }
-        return 0;
-
-
-        /*
-        BufferedReader works too!
-
-        public static void main(String[] args) throws IOException {
-
-            ArrayList<String> list = new ArrayList<>();
-
-            BufferedReader bf = new BufferedReader(new FileReader("input.txt"));
-
-            while((true)) {
-                String line = bf.readLine();
-                if (line == null) {
-                    break;
-                }
-                list.add(line);
-
-                System.out.println(line);
-            }
-            bf.close();
-        }
-        */
-
 
     }
+
 
 
 
@@ -106,6 +124,7 @@ public class LetterGrader {
         return avg;
     }
 
+
     public int Q2min() {
 
         int Q2[] = {98, 82, 75, 90, 98, 93};
@@ -128,6 +147,7 @@ public class LetterGrader {
 
         return min;
     }
+
 
     public int Q2max() {
 
@@ -475,31 +495,3 @@ public class LetterGrader {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
