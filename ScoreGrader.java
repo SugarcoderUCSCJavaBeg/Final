@@ -73,7 +73,7 @@ public class ScoreGrader {
 
     public int Q1min() {
 
-        int Q1[] = {100, 85, 70, 82, 99, 95};
+        int[] Q1 = {100, 85, 70, 82, 99, 95};
 
         int i;
         int min = 0;
@@ -92,7 +92,7 @@ public class ScoreGrader {
 
     public  int Q1max() {
 
-        int Q1[] = {100, 85, 70, 82, 99, 95};
+        int[] Q1 = {100, 85, 70, 82, 99, 95};
 
         int i;
         int max = 0;
@@ -111,7 +111,7 @@ public class ScoreGrader {
 
     public double Q1avg() {
 
-        int Q1[] = {100, 85, 70, 82, 99, 95};
+        int[] Q1 = {100, 85, 70, 82, 99, 95};
 
         int i;
         int total = 0;
@@ -127,7 +127,7 @@ public class ScoreGrader {
 
     public int Q2min() {
 
-        int Q2[] = {98, 82, 75, 90, 98, 93};
+        int[] Q2 = {98, 82, 75, 90, 98, 93};
 
         int i;
         int max = 0;
@@ -151,7 +151,7 @@ public class ScoreGrader {
 
     public int Q2max() {
 
-        int Q2[] = {98, 82, 75, 90, 98, 93};
+        int[] Q2 = {98, 82, 75, 90, 98, 93};
 
         int i;
         int max = 0;
@@ -174,7 +174,7 @@ public class ScoreGrader {
 
     public double Q2avg() {
 
-        int Q2[] = {98, 82, 75, 90, 98, 93};
+        int[] Q2 = {98, 82, 75, 90, 98, 93};
 
         int i;
         int total = 0;
@@ -189,7 +189,7 @@ public class ScoreGrader {
 
     public int Q3min() {
 
-        int Q3[] = {95, 88, 72, 88, 100, 90};
+        int[] Q3 = {95, 88, 72, 88, 100, 90};
 
         int i;
         int max = 0;
@@ -211,7 +211,7 @@ public class ScoreGrader {
 
     public int Q3max() {
 
-        int Q3[] = {95, 88, 72, 88, 100, 90};
+        int[] Q3 = {95, 88, 72, 88, 100, 90};
 
         int i;
         int max = 0;
@@ -233,7 +233,7 @@ public class ScoreGrader {
 
     public double Q3avg() {
 
-        int Q3[] = {95, 88, 72, 88, 100, 90};
+        int[] Q3 = {95, 88, 72, 88, 100, 90};
 
         int i;
         int total = 0;
@@ -248,7 +248,7 @@ public class ScoreGrader {
 
     public int Q4min() {
 
-        int Q4[] = {90, 78, 78, 95, 96, 100};
+        int[] Q4 = {90, 78, 78, 95, 96, 100};
 
         int i;
         int max = 0;
@@ -271,7 +271,7 @@ public class ScoreGrader {
 
     public int Q4max() {
 
-        int Q4[] = {90, 78, 78, 95, 96, 100};
+        int[] Q4 = {90, 78, 78, 95, 96, 100};
 
         int i;
         int max = 0;
@@ -294,7 +294,7 @@ public class ScoreGrader {
 
     public double Q4avg() {
 
-        int Q4[] = {90, 78, 78, 95, 96, 100};
+        int[] Q4 = {90, 78, 78, 95, 96, 100};
 
         int i;
         int total = 0;
@@ -309,7 +309,7 @@ public class ScoreGrader {
 
     public int mid1min() {
 
-        int mid1[] = {93, 85, 80, 92, 100, 98};
+        int[] mid1 = {93, 85, 80, 92, 100, 98};
 
         int i;
         int max = 0;
@@ -333,7 +333,7 @@ public class ScoreGrader {
 
     public int mid1max() {
 
-        int mid1[] = {93, 85, 80, 92, 100, 98};
+        int[] mid1 = {93, 85, 80, 92, 100, 98};
 
         int i;
         int max = 0;
@@ -357,7 +357,7 @@ public class ScoreGrader {
 
     public double mid1avg() {
 
-        int mid1[] = {93, 85, 80, 92, 100, 98};
+        int[] mid1 = {93, 85, 80, 92, 100, 98};
 
         int i;
         int total = 0;
@@ -372,7 +372,7 @@ public class ScoreGrader {
 
     public int mid2min() {
 
-        int mid2[] = {88, 86, 82, 86, 97, 89};
+        int[] mid2 = {88, 86, 82, 86, 97, 89};
 
         int i;
         int max = 0;
@@ -396,7 +396,7 @@ public class ScoreGrader {
 
     public int mid2max() {
 
-        int mid2[] = {88, 86, 82, 86, 97, 89};
+        int[] mid2 = {88, 86, 82, 86, 97, 89};
 
         int i;
         int max = 0;
@@ -420,7 +420,7 @@ public class ScoreGrader {
 
     public double mid2avg() {
 
-        int mid2[] = {88, 86, 82, 86, 97, 89};
+        int[] mid2 = {88, 86, 82, 86, 97, 89};
 
         int i;
         int total = 0;
@@ -435,7 +435,7 @@ public class ScoreGrader {
 
     public int final1min() {
 
-        int final1[] = {92, 90, 76, 87, 95, 92};
+        int[] final1 = {92, 90, 76, 87, 95, 92};
 
         int i;
         int max = 0;
@@ -458,7 +458,7 @@ public class ScoreGrader {
 
     public int final1max() {
 
-        int final1[] = {92, 90, 76, 87, 95, 92};
+        int[] final1 = {92, 90, 76, 87, 95, 92};
 
         int i;
         int max = 0;
@@ -481,7 +481,7 @@ public class ScoreGrader {
 
     public double final1avg() {
 
-        int final1[] = {92, 90, 76, 87, 95, 92};
+        int[] final1 = {92, 90, 76, 87, 95, 92};
 
         int i;
         int total = 0;
