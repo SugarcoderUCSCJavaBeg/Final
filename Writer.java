@@ -43,9 +43,7 @@ public class Writer {
         }
     }
 
-
-
-
+    
     public Writer() throws FileNotFoundException {
         ArrayList<Integer> list = new ArrayList<>();
         BufferedReader bf = null;
@@ -75,7 +73,6 @@ public class Writer {
             int mid1 = Integer.parseInt(columns[5]);
             int mid2 = Integer.parseInt(columns[6]);
             int final1 = Integer.parseInt(columns[7]);
-
 
             double finalGrade = (quiz1 *.10) + (quiz2 *.10) + (quiz3*.10) + (quiz4*.10) + (mid1*.20) + (mid2*.15) + (final1*.25);
 
