@@ -5,7 +5,6 @@ public class TestGrader {
 
     public static void main(String[] args) throws IOException {
 
-        boolean quit = false;
         ScoreGrader scoreGrader = new ScoreGrader();
         Reader reader = new Reader();
         System.out.println("These are all the scores from the file.\n");
@@ -19,24 +18,29 @@ public class TestGrader {
         System.out.printf("Maximum: " + "%d%12d%12d%12d%12d%12d%12d\n", scoreGrader.Q1max(), scoreGrader.Q2max(), scoreGrader.Q3max(), scoreGrader.Q4max(), scoreGrader.mid1max(), scoreGrader.mid2max(), scoreGrader.final1max());
         System.out.println(" ");
 
+        // System.out.println("******************\n");
+
+        // The code below will write to a file called "output.txt".
+
+        Writer.writeToFile();
+
+        // System.out.println("******************\n");
+
+        doCleanup();
+
+    }
+
+
+    public static void doCleanup() {
+        boolean quit = false;
         while(!quit) {
             System.out.println("..... Press Enter to continue");
             Scanner keyboard = new Scanner(System.in);
             keyboard.nextLine();
             System.exit(0);
         }
-
-
-        // System.out.println("******************\n");
-
-        // letterGrader.calcLetterGrade(100);
-
-
-        // System.out.println("******************\n");
-
-
-        // letterGrader.printGrade();         Writes the grade in output file
-
-
     }
+
 }
+
+
