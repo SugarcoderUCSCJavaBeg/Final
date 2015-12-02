@@ -21,14 +21,14 @@ public class TestGrader {
         System.out.printf("Minimum: " + "%d%12d%12d%12d%12d%12d%12d\n", scoreGrader.Q1min(), scoreGrader.Q2min(), scoreGrader.Q3min(), scoreGrader.Q4min(), scoreGrader.mid1min(), scoreGrader.mid2min(), scoreGrader.final1min());
         System.out.printf("Maximum: " + "%d%12d%12d%12d%12d%12d%12d\n", scoreGrader.Q1max(), scoreGrader.Q2max(), scoreGrader.Q3max(), scoreGrader.Q4max(), scoreGrader.mid1max(), scoreGrader.mid2max(), scoreGrader.final1max());
         System.out.println(" ");
-
-        // System.out.println("******************\n");
+        
 
         // The code below will write to a file called "output.txt".
 
         Writer.writeToFile();
 
-        // System.out.println("******************\n");
+        System.out.println("Letter grade has been calculated for students listed in 'input.txt' file and written to 'output.txt' file.\n");
+
 
         doCleanup();
 
