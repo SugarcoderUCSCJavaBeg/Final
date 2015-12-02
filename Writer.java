@@ -3,8 +3,7 @@ import java.util.ArrayList;
 
 public class Writer {
 
-    public static void main(String[] args) throws IOException {
-
+    public static void writeFile() throws IOException {
         BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"));
         writer.write("Letter grade for 6 students given in output.txt file is:\n");
         writer.newLine();
@@ -22,9 +21,6 @@ public class Writer {
         writer.write("Tom Brady: " + calculateGrade(93.75));
         writer.newLine();
         writer.close();
-
-        System.out.println(new Writer());
-
     }
 
 
