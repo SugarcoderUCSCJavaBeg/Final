@@ -43,7 +43,7 @@ public class Writer {
         }
     }
 
-    
+
     public Writer() throws FileNotFoundException {
         ArrayList<Integer> list = new ArrayList<>();
         BufferedReader bf = null;
