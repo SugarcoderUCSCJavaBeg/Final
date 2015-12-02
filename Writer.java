@@ -1,6 +1,10 @@
 import java.io.*;
 import java.util.ArrayList;
 
+/**
+ * Created by Sugarcoder on 11/25/2015.
+ */
+
 public class Writer {
 
     public static void writeToFile() throws IOException {
@@ -75,7 +79,7 @@ public class Writer {
 
             double finalGrade = (quiz1 *.10) + (quiz2 *.10) + (quiz3*.10) + (quiz4*.10) + (mid1*.20) + (mid2*.15) + (final1*.25);
 
-            // System.out.println(finalGrade);        This will print out the final grade of each student.
+            // System.out.println(finalGrade);        This line will print out the final grade of each student.
 
         }
 
@@ -86,6 +90,5 @@ public class Writer {
         }
 
     }
-
 
 }

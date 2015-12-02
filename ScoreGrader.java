@@ -42,7 +42,7 @@ public class ScoreGrader {
             int mid2 = Integer.parseInt(columns[6]);
             int final1 = Integer.parseInt(columns[7]);
 
-            // System.out.println(q1);      // This will display the column of q1
+             // System.out.println(q1);      // This will display the column of q1
 
             ArrayList<Integer> scoreList = new ArrayList<>();
             scoreList.add(q1);
@@ -53,7 +53,7 @@ public class ScoreGrader {
             scoreList.add(mid2);
             scoreList.add(final1);
 
-            // System.out.println(scoreList.get(0));     // This will display the numbers by column
+            // System.out.println(scoreList.get(0));     // This will display the numbers (by column)
 
         }
 
@@ -64,9 +64,6 @@ public class ScoreGrader {
         }
 
     }
-
-
-
 
 
     // Calculating the average, maximum, and minimum scores.

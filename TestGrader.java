@@ -1,6 +1,10 @@
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ * Created by Sugarcoder on 11/03/2015.
+ */
+
 public class TestGrader {
 
     public static void main(String[] args) throws IOException {
@@ -42,5 +46,3 @@ public class TestGrader {
     }
 
 }
-
-
